@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+body {
+    width              : 100%;
+    height             : 150vh;
+    background         : url(eeer.jpeg);
+    background-position: center;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    backdrop-filter    : saturate(100%) blur(5px);
+    font-family        : 'Poppins', sans-serif;
+}
+
+.login-form {
+    width          : 40%;
+    margin         : auto;
+    display        : flex;
+    transform      : translateY(25%);
+    min-height     : 70vh;
+    border-radius  : 3rem;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    
+}
+
+
+
+form {
+    width    : 500px;
+    position : relative;
+    transform: translateY(20%);
+}
+
+form h2 {
+    transform              : translateY(-30px);
+    width                  : 100%;
+    font-size              : 3rem;
+    font-weight            : 700;
+   color: green;
+}
+
+.form-input {
+    position             : relative;
+    display              : grid;
+    padding              : 5px 0;
+    margin               : 35px 0;
+    border-bottom        : 2px solid #555;
+    grid-template-columns: 7% 93%;
+}
+
+.form-input.user {
+    margin-top: 0;
+}
+
+.form-input.psw {
+    margin-bottom: 10px;
+}
+
+.i {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.i i {
+    color     : #fff;
+    transition: .1S;
+}
+
+.form-input>div {
+    position: relative;
+    height  : 45px;
+}
+
+.form-input>div>h5 {
+    position  : absolute;
+    top       : 50%;
+    left      : 10px;
+    transform : translateY(-50%);
+    font-size : 18px;
+    color     : white;
+    transition: .1s;
+}
+
+.form-input .input {
+    position   : absolute;
+    width      : 100%;
+    height     : 100%;
+    top        : 0;
+    left       : 0;
+    outline    : none;
+    border     : none;
+    background : none;
+    padding    : 0.5rem 0.5rem;
+    font-size  : 1.2rem;
+    font-family: 'poppins', sans-serif;
+    color      : white;
+}
+
+.form-input.focus .i i {
+    color: #d90202;
+}
+
+.form-input.focus div h5 {
+    top      : -5px;
+    font-size: 15px;
+}
+
+.form-input::after,
+.form-input::before {
+    content         : '';
+    position        : absolute;
+    bottom          : -2px;
+    width           : 0;
+    height          : 2px;
+    background-color: #d90202;
+    transition      : .1s;
+}
+
+.form-input::after {
+    right: 50%;
+}
+
+.form-input::before {
+    left: 50%;
+}
+
+.form-input.focus::after,
+.form-input.focus::before {
+    width: 50%;
+}
+
+.btn {
+    display      : block;
+    width        : 100%;
+    height       : 50px;
+    border-radius: 25px;
+    margin       : 3.5rem 0;
+    font-size    : 1.2rem;
+    outline      : none;
+    border       : none;
+    background-image:  linear-gradient(to right, #d90202,#0b0b0b,
+          #0000ff  );
+    cursor         : pointer;
+    color          : #fff;
+    text-transform : uppercase;
+    font-family    : 'poppins', sans-serif;
+    background-size: 200%;
+    transition     : .6s;
+}
+
+.btn:hover {
+    background-position: right;
+}
+
+#error {
+    color   : rgb(226, 7, 7);
+    position: absolute;
+    left    : 25px;
+}
